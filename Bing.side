@@ -1,0 +1,56 @@
+{
+  "id": "7e0d622d-4515-4482-b258-2259f66dcbb1",
+  "version": "2.0",
+  "name": "Bing",
+  "url": "https://www.bing.com",
+  "tests": [{
+    "id": "5fe8a1a8-d375-4533-8853-d464937741b4",
+    "name": "1",
+    "commands": [{
+      "id": "037b0d27-2f2e-40a9-8658-e6863c098a69",
+      "comment": "",
+      "command": "open",
+      "target": "/?toWww=1&redig=9D886D34ED29482095ECD0B33158C834",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "279ebee0-8726-4c3b-85fa-2e3314f5bf20",
+      "comment": "",
+      "command": "type",
+      "target": "id=sb_form_q",
+      "targets": [
+        ["id=sb_form_q", "id"],
+        ["name=q", "name"],
+        ["css=#sb_form_q", "css:finder"],
+        ["xpath=//input[@id='sb_form_q']", "xpath:attributes"],
+        ["xpath=//form[@id='sb_form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "selenium"
+    }, {
+      "id": "9e11108c-a743-4724-8be3-30d745987fec",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=sb_form_q",
+      "targets": [
+        ["id=sb_form_q", "id"],
+        ["name=q", "name"],
+        ["css=#sb_form_q", "css:finder"],
+        ["xpath=//input[@id='sb_form_q']", "xpath:attributes"],
+        ["xpath=//form[@id='sb_form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }],
+  "suites": [{
+    "id": "ba23ec94-2709-468f-94c6-04dfdcfdf9bd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5fe8a1a8-d375-4533-8853-d464937741b4"]
+  }],
+  "urls": ["https://www.bing.com/"],
+  "plugins": []
+}
